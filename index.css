@@ -1,0 +1,164 @@
+/* General body styling */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  overflow: hidden; /* Prevents scrollbars if not needed */
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: #b3cde0; /* Pastel blue color */
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: calc(100% - 15px); /* Adjust width to move it slightly to the left */
+  left: -5px; /* Move the navbar 10px to the left */
+  z-index: 1000;
+}
+
+/* Navbar link styling */
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.1em;
+  padding: 5px 10px;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+
+/* General page styling */
+.homepage, .dessert, .breakfast {
+  position: relative;
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  overflow: hidden; /* Ensures petals don’t overflow outside the div */
+  color: #333;
+  text-align: center;
+  padding: 20px;
+  background: url('./assets/petals.gif') no-repeat center center fixed;
+  background-size: cover; /* Ensures background covers the entire area */
+}
+
+/* Keyframe animation to create a smooth falling effect */
+@keyframes fall {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 100%;
+  }
+}
+
+/* Separator styling */
+.separator {
+  border-top: 2px solid #333; /* Black bar */
+  width: 100vw; /* Full viewport width */
+  position: relative; /* Adjust positioning if necessary */
+  left: 0; /* Ensure it's flush with the left edge */
+  margin: 0; /* Remove default margins */
+  box-sizing: border-box; /* Include padding and borders in width */
+}
+
+
+
+
+/* Welcome section styling */
+.welcome-section, .modal-content, .recent-recipes {
+  margin: 50px 0;
+}
+
+.welcome-section h1, .recent-recipes h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.welcome-section p {
+  font-size: 1.2em;
+}
+
+/* Recent recipes styling */
+.recent-recipes {
+  padding-top: 20px;
+  margin: 0; /* Remove margins */
+  width: 100%; /* Ensure full width */
+  box-sizing: border-box; /* Include padding and border in width calculation */
+}
+
+
+.recent-recipes h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.recipes-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Allows wrapping if there are too many items */
+}
+
+.recipe {
+  margin: 10px;
+  text-align: center;
+  border: 1px solid #ddd; /* Box border */
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #f9f9f9; /* Light background for recipes */
+}
+
+.recipe img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.recipe a {
+  display: block;
+  margin-top: 5px;
+  font-size: 1.1em;
+  text-decoration: none;
+  color: #0066cc;
+}
+
+.recipe a:hover {
+  text-decoration: underline;
+}
+
+/* Modal styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+  width: 80%;
+  max-width: 600px;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ff0000;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
